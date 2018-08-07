@@ -1,0 +1,24 @@
+{
+  "name": "board-rest",
+  "version": "0.0.1",
+  "description": "Rest server for React-based board application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianobarragan/board-rest.git"
+  },
+  "author": "mbarragan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianobarragan/board-rest/issues"
+  },
+  "homepage": "https://github.com/marianobarragan/board-rest#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "validator": "^10.5.0"
+  }
+}

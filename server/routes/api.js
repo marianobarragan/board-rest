@@ -1,16 +1,16 @@
+const TaskController = require('../controllers/TasksController')
+
 module.exports = function(app){
 
-    // const TasksControllerFile = require('../controllers/TasksController');
-    // const tasksController = new TasksControllerFile.TasksController();    
-    const TaskController = require('../controllers/TasksController')
     app.get('/', (req, res) => {res.json('Hello World')})
-
-    app.get('/test', (req, res) => { TaskController.getTasks(req,res)})
+    app.get('/test', (req, res) => {res.json(tasks)})
 
     // ******************************************************************** //
     // Tasks
     // ******************************************************************** //
     
+    // app.get('/api/v1/tasks/:id', (req, res) => {res.status(200).json(tasks["to-do"].tasks[0])})
+
     app.get('/api/v1/tasks', (req, res) => {TaskController.getTasks(req,res)})
 
     app.post('/api/v1/tasks', (req, res) => {TaskController.createTask(req,res)})

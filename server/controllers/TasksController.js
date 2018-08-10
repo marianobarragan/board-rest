@@ -1,8 +1,10 @@
 const validator = require('validator');
 const bodyParser = require('body-parser');
+const TaskModel = require('../models/Tasks');
 
 exports.getTasks = (request,response) => {
-    response.json('tasks')
+    
+    response.status(200).json(TaskModel.getTasks())
 }
 
 exports.createTask = (req,res) => {
@@ -14,12 +16,13 @@ exports.createTask = (req,res) => {
             message: "_id not defined"
         });        
     }
-    res.json({body: body})
+    res.status(201).json({body: body})
 }
+
 exports.modifyTask = (req,res) => {
     const id = req.params.id + ''
     if (validator.isInt(id) ){
-        res.json({id})
+        res.status(202).json({id})
     } else {
         res.status(404).json({
             success: false,
@@ -31,7 +34,7 @@ exports.modifyTask = (req,res) => {
 exports.softDeleteTask = (req,res) => {
     const id = req.params.id + ''
     if (validator.isInt(id) ){
-        res.json({id})
+        res.status(202).json({id})
     } else {
         res.status(404).json({
             success: false,
@@ -39,8 +42,8 @@ exports.softDeleteTask = (req,res) => {
         });
     }
 }
-// class TasksController{
 
+// class TasksController{
 //     getTasks(request,response) {
 //         response.json('tasks')
 //     }
@@ -50,5 +53,4 @@ exports.softDeleteTask = (req,res) => {
 // //   res.end(JSON.stringify(req.body, null, 2))
 // // })    
 // }
-
 // module.exports = {TasksController};

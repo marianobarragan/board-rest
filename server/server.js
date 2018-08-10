@@ -15,11 +15,11 @@ app.use(bodyParser.json())
 require('./routes/api.js')(app);
 
 /****************************************************** */
-const mongoose = require('mongoose');
-mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`, (err,res)=>{
-    if (err) throw err;
-    console.log("Connected to MongoDB: OK");
-});
+// const mongoose = require('mongoose');
+// mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,{ useNewUrlParser: true }, (err,res)=>{
+//     if (err) throw err;
+//     console.log("Connected to MongoDB: OK");
+// });
 /****************************************************** */
 app.listen(process.env.PORT, ()=>{
     console.log(`Listening to: ${process.env.PORT}`);

@@ -17,13 +17,13 @@ require('./routes/api.js')(app);
 // var cors = require('cors');
 // app.use(cors({origin: 'localhost:3000'}))
 /****************************************************** */
-// const mongoose = require('mongoose');
-// mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,{ useNewUrlParser: true }, (err,res)=>{
-//     if (err) throw err;
-//     console.log("Connected to MongoDB: OK");
-// });
+const mongoose = require('mongoose');
+mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,{ useNewUrlParser: true }, (err,res)=>{
+    if (err) throw err;
+    console.log("Connected to MongoDB: OK");
+});
 /****************************************************** */
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT, () => {
     console.log(`Listening to: ${process.env.PORT}`);
     //console.log(process.env);
 } );

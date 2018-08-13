@@ -1,9 +1,9 @@
 const TaskController = require('../controllers/TasksController')
 
-module.exports = function(app){
+module.exports = (app) => {
 
     app.get('/', (req, res) => {res.json('Hello World')})
-    app.get('/test', (req, res) => {res.json(tasks)})
+    app.get('/test', (req, res) => {res.json(process.env)})
 
     // ******************************************************************** //
     // Tasks

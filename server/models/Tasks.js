@@ -8,24 +8,24 @@
 //   date: Date
 // });
 
-let mongoose = require('mongoose')
-let Schema = mongoose.Schema();
-// let ObjectId = Schema.Types.ObjectId;
+// let mongoose = require('mongoose')
+// let Schema = mongoose.Schema();
+// // let ObjectId = Schema.Types.ObjectId;
 
-const TasksSchema = mongoose.Schema({
-  title: {type: String, required: true},
-  color: {type: String, required: false, default: "#b2b2b2"},
-  tasks: [
-    {
-      title: {type: String, required: true},
-      desc: {type: String, required: false},
-      list: {type: String, required: true}
-    }
-  ]
-},{timestamps: true },{ collection: 'tasks'});
-// { collection: 'tasks'}, {timestamps: true }
+// const TasksSchema = mongoose.Schema({
+//   title: {type: String, required: true},
+//   color: {type: String, required: false, default: "#b2b2b2"},
+//   tasks: [
+//     {
+//       title: {type: String, required: true},
+//       desc: {type: String, required: false},
+//       list: {type: String, required: true}
+//     }
+//   ]
+// },{timestamps: true },{ collection: 'tasks'});
+// // { collection: 'tasks'}, {timestamps: true }
 
-module.exports = mongoose.model("Tasks", TasksSchema)
+// module.exports = mongoose.model("Tasks", TasksSchema)
 
 exports.getTasks = () => {
   return tasks;

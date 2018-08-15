@@ -1,4 +1,4 @@
-module.exports = function(app){
+module.exports = (app) => {
     // Add headers
     app.use(function (req, res, next) {
 

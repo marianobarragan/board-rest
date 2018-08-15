@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-require('./middleware/headers.js')(app);
+// Load middleware
+require('./middleware/loader.js')(app);
+
+// Load routes
 require('./routes/api.js')(app);
-/****************************************************** */
-// var cors = require('cors');
-// app.use(cors({origin: 'localhost:3000'}))
-/****************************************************** */
+
 const mongoose = require('mongoose');
 mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,{ useNewUrlParser: true }, (err,res)=>{
     if (err) throw err;

@@ -1,11 +1,12 @@
 require('./config/config.js')
 require('dotenv').config({path: './.env'})
 
-const validator = require('validator');
-const bodyParser = require('body-parser');
+
 const express = require('express')
 const app = express()
 
+const validator = require('validator');
+const bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json

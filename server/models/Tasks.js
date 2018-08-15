@@ -33,8 +33,29 @@ exports.getTasks = () => {
 
 var tasks = [
   {
+    "title": "New",
+    "color": "Fuzzy wuzzy",
+    "tasks": [
+    {
+        "id": "item-30",
+        "title": "Tarea 30",
+        "desc": "Descripción de la tarea",
+      },
+      {
+        "id": "item-31",
+        "title": "Tarea 31",
+        "desc": "Descripción de la tarea",
+      },
+      {
+        "id": "item-32",
+        "title": "Tarea 32",
+        "desc": "Descripción de la tarea",
+      }
+    ]
+  },
+  {
     "title": "To do",
-    "color": "#028090",
+    "color": "Azul cadete",
     "tasks": [
       {
         "id": "item-0",
@@ -90,7 +111,7 @@ var tasks = [
   },
   {
     "title": "Doing",
-    "color": "#456990",
+    "color": "Rojo medio",
     "tasks": [
       {
         "id": "item-10",
@@ -146,7 +167,7 @@ var tasks = [
   },
   {
     "title": "Done",
-    "color": "#C6CCC6",
+    "color": "Topaz",
     "tasks": [
       {
         "id": "item-20",

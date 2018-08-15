@@ -14,6 +14,7 @@ let Schema = mongoose.Schema();
 
 const TasksSchema = mongoose.Schema({
   title: {type: String, required: true},
+  color: {type: String, required: false, default: "#b2b2b2"},
   tasks: [
     {
       title: {type: String, required: true},
